@@ -49,9 +49,9 @@ composer install
 To create the database needed, from your SQL prompt run commands:
 
 ~~~~
-SQL&gt; CREATE DATABASE dbname;
-SQL&gt; CREATE USER 'dbusername'@'localhost' IDENTIFIED BY 'password';
-SQL&gt; GRANT ALL PRIVILEGES ON dbname.* TO 'dbusername'@'localhost';
+SQL> CREATE DATABASE dbname;
+SQL> CREATE USER 'dbusername'@'localhost' IDENTIFIED BY 'password';
+SQL> GRANT ALL PRIVILEGES ON dbname.* TO 'dbusername'@'localhost';
 ~~~~
 
 Then create the schema:

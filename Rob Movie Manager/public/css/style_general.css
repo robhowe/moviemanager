@@ -1,0 +1,116 @@
+/**
+ * style_general.css
+ *
+ * Stylesheet for general CSS.
+ *
+ * @category   CSS
+ * @package    RobMovieManager
+ * @link       http://moviemanager.robhowe.com/
+ * @since      version 0.2
+ */
+
+
+/*
+ * Content
+ */
+strong, .strong, .bold {
+    font-weight: bold;
+}
+em, .em, .italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.blue {
+    color: blue;
+}
+.yellow {
+/*    color: yellow;*/  /* pure yellow text is not readable on a white bg */
+    color: #918F0C;  /* readable text color */
+}
+
+.nostyle {
+    background-color: #99FFFF;
+    color: #000000;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12pt;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.left {
+    text-align: left;
+    float: left;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.right {
+    text-align: right;
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.top {
+    vertical-align: text-top;
+}
+
+.sub {
+    vertical-align: sub;
+    font-size: 80%;
+}
+.sup {
+    vertical-align: super;
+    font-size: 80%;
+}
+
+.display-none {
+    display: none;
+}
+.visibility-hidden {
+    visibility: hidden;
+}
+
+small, .small {
+/*    font-size: 10pt;*/
+/*    font-size: 80%;*/
+    font-size: .8em;
+}
+.large {
+    font-size: 1.2em;
+}
+
+.nostyle {
+    background-color: #99FFFF;
+    color: #000000;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 12pt;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.tinylink {
+    font-size: 7pt;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    /* cursor: help; */
+}

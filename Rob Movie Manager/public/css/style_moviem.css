@@ -1,0 +1,21 @@
+/**
+ * style_moviem.css
+ *
+ * Stylesheet for Movie Manager pages.
+ *
+ * @category   CSS
+ * @package    RobMovieManager
+ * @link       http://moviemanager.robhowe.com/
+ * @since      version 0.2
+ */
+
+
+/*
+ * master layout
+ */
+
+/* Top-left mini logo */
+#moviem-logo {
+    width: 66px;
+    float: left;
+}

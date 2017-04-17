@@ -8,10 +8,14 @@
     <meta name="keywords" content="movie manager,movie collection,movie manager collection,movies,my movies" />
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}"  />-->
+    <link rel="stylesheet" href="{{ URL::asset('css/style_general.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/style_moviem.css') }}" />
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
+            <a href="{{ url('/') }}"><img id="moviem-logo" src="images/moviem_logo.jpg" /></a>
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ url('/moviecollection') }}">Movie Collection</a></li>

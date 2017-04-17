@@ -12,5 +12,9 @@
             <div class="row">{{ $movie->title }}</div>
         @endforeach
     </div>
+
+    <div class="row">
+        <a href="{{ route('moviecollection.create') }}" class="btn btn-default">Add a Movie</a>
+    </div>
 </div>
 @endsection

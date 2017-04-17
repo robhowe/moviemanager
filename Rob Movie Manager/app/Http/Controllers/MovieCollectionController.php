@@ -27,7 +27,7 @@ class MovieCollectionController extends Controller
      */
     public function create()
     {
-        //
+        return view("moviecollection.create");
     }
 
     /**
@@ -39,7 +39,9 @@ class MovieCollectionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Movie::create($request->all());
+        return redirect('moviecollection');
+
     }
 
     /**
@@ -88,6 +90,9 @@ class MovieCollectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $movie = Movie::findOrFail($id);
+        $movie->delete($id);
+        return redirect('moviecollection');
+
     }
 }
