@@ -12,11 +12,11 @@ Build a website with a database backend for storing a movie collection.
   1. Title the app &lt;Your First Name&gt; +” Movie Manager”
   2. App can create, read, update, delete, list one movie collection (your first model)
     a. Each movie item needs the following:
-        i. Title (text, 1min, 50 char max)
-       ii. Format (dropdown picker, text ) values “VHS”, “DVD”, “Streaming”
-      iii. Length (time, minutes, >0 and <500) displayed as “x hr yy m”
-       iv. Release Year (integer, >1800 and < 2100)
-        v. Rating (radio button, integer) values default null, 1,2,3,4,5
+        1. Title (text, 1min, 50 char max)
+        2. Format (dropdown picker, text ) values “VHS”, “DVD”, “Streaming”
+        3. Length (time, minutes, >0 and <500) displayed as “x hr yy m”
+        4. Release Year (integer, >1800 and < 2100)
+        5. Rating (radio button, integer) values default null, 1,2,3,4,5
   3. Make it pretty w BootStrap (or Foundation or anything)
   4. Add a home (at the root \ of the app) splash page with a cool graphic (hyperlink the image to the index page of the movie collection)
   5. Add Header\Footer (menu on the Header, links to Home and Movies)
