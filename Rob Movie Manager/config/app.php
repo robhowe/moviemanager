@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Rob Movie Manager',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        RobMovieManager\Providers\AppServiceProvider::class,
+        RobMovieManager\Providers\AuthServiceProvider::class,
+        // RobMovieManager\Providers\BroadcastServiceProvider::class,
+        RobMovieManager\Providers\EventServiceProvider::class,
+        RobMovieManager\Providers\RouteServiceProvider::class,
 
     ],
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace RobMovieManager\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

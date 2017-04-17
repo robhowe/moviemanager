@@ -48,12 +48,19 @@ composer install
 composer update
 ~~~~
 
-To create the database needed, run commands:
+To create the database needed, from your SQL prompt run commands:
 
 ~~~~
-php bin/console doctrine:database:drop --force
-php bin/console doctrine:database:create
-php bin/console doctrine:schema:update --force
+CREATE DATABASE dbname;
+CREATE USER 'dbusername'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON dbname.* TO 'dbusername'@'localhost';
+~~~~
+
+Then create the schema:
+
+~~~~
+php artisan migrate:install
+php artisan migrate
 ~~~~
 
 If needed, start a webserver.
