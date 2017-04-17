@@ -11,12 +11,6 @@
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
-
 Route::get("/", "WelcomeController@welcome");
-Route::get("/home", "WelcomeController@welcome");
-Route::get("/front", "WelcomeController@welcome");
+
+Route::get("/moviecollection", "MovieCollectionController@index");
