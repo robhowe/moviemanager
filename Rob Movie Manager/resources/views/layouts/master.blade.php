@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="{{ url('/') }}"><img id="moviem-logo" src="images/moviem_logo.jpg" /></a>
+            <a href="{{ url('/') }}"><img id="moviem-logo" src="/images/moviem_logo.jpg" /></a>
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ url('/moviecollection') }}">Movie Collection</a></li>

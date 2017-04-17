@@ -20,7 +20,7 @@ class CreateMovieTable extends Migration
             $table->increments('id');
             $table->integer('tmdb_id')
                     ->nullable()->comment('The primary id on api.themoviedb.org');
-            $table->integer('imdb_id')
+            $table->string('imdb_id', 64)
                     ->nullable()->comment('The primary id on IMDb.com');
             $table->string('title', 50);
             $table->text('overview')

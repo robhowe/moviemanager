@@ -13,4 +13,4 @@
 
 Route::get("/", "WelcomeController@welcome");
 
-Route::get("/moviecollection", "MovieCollectionController@index");
+Route::resource("moviecollection", "MovieCollectionController");
