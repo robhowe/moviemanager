@@ -9,7 +9,7 @@ Build a website with a database backend for storing a movie collection.
 
 ## App requirements:
   **Simple Movie collection**
-  1. Title the app <Your First Name> +” Movie Manager”
+  1. Title the app &lt;Your First Name&gt; +” Movie Manager”
   2. App can create, read, update, delete, list one movie collection (your first model)
     a. Each movie item needs the following:
         i. Title (text, 1min, 50 char max)
@@ -23,8 +23,6 @@ Build a website with a database backend for storing a movie collection.
   6. Make the design fluid and responsive to screen size (to view on phone, tablet, etc).
   7. Make the items list sortable by all columns(title, format, etc)
 
-
-Useful references: [Event Dispatcher](http://symfony.com/doc/current/components/event_dispatcher/introduction.html), [Doctrine ORM](http://symfony.com/doc/current/book/doctrine.html), [Swift Mailer](http://symfony.com/doc/current/cookbook/email/email.html)
 
 *****
 
@@ -45,6 +43,8 @@ Rob Movie Manager/config/app.php
 Pull in the needed files via composer:
 
 ~~~~
+composer install
+# or
 composer update
 ~~~~
 

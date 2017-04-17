@@ -1,0 +1,32 @@
+# See  http://gitignore.io
+
+# Laravel 4 specific
+/bootstrap/compiled.php
+/app/storage/
+
+# Laravel 5 & Lumen specific
+/public/storage
+/public/hot
+/storage/*.key
+Homestead.json
+Homestead.yaml
+.env.*.php
+.env.php
+.env
+
+# Rocketeer PHP task runner and deployment package.
+# https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+# Composer
+/vendor/
+# Node Package Manager (NPM)
+/node_modules/
+npm-debug.log
+
+# IDE
+.idea
+.idea_modules/
+# NetBeans IDE
+/nbproject/
+.nb-gradle/

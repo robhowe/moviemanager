@@ -1,2 +1,14 @@
+# See  http://gitignore.io
+
+# Composer
+/vendor/
+# Node Package Manager (NPM)
+/node_modules/
+npm-debug.log
+
+# IDE
+.idea
+.idea_modules/
+# NetBeans IDE
 /nbproject/
-/nbproject/private/
+.nb-gradle/
