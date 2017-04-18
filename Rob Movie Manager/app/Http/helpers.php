@@ -22,3 +22,25 @@ function getDisplayMinutes($minutes) {
     }
     return $ret_str;
 }
+
+
+function getErrorsClass($errors, $field) {
+    $ret_str = '';
+    if ($errors->has($field)) {
+        $ret_str = ' has-error red';
+    }
+    return $ret_str;
+}
+
+
+function getErrorsContent($errors, $field) {
+    $ret_str = '';
+    if ($errors->has($field)) {
+        if ($field === 'format') {
+            $ret_str = '<div class="has-error red">Please select a valid format.</div>';
+        } else {
+            $ret_str = '<div class="has-error red">' . $errors->first($field) . '</div>';
+        }
+    }
+    return $ret_str;
+}

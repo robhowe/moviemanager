@@ -3,6 +3,7 @@
 namespace RobMovieManager\Http\Controllers;
 
 use RobMovieManager\Movie;
+use RobMovieManager\Http\Requests\MovieCollectionRequest;
 use Illuminate\Http\Request;
 
 class MovieCollectionController extends Controller
@@ -37,7 +38,7 @@ class MovieCollectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MovieCollectionRequest $request)
     {
         Movie::create($request->all());
         return redirect('moviecollection');
@@ -65,7 +66,8 @@ class MovieCollectionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $movieCollection = Movie::findOrFail($id);
+        return view("moviecollection.edit", array('movieCollection' => $movieCollection));
     }
 
     /**
@@ -76,7 +78,7 @@ class MovieCollectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MovieCollectionRequest $request, $id)
     {
         //
     }
