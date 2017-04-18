@@ -80,7 +80,9 @@ class MovieCollectionController extends Controller
      */
     public function update(MovieCollectionRequest $request, $id)
     {
-        //
+        $movie = Movie::findOrFail($id);
+        $movie->update($request->all());
+        return redirect('moviecollection');
     }
 
     /**

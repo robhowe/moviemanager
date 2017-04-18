@@ -19,3 +19,14 @@
     width: 66px;
     float: left;
 }
+
+
+/*
+ * Form fields / validation
+ */
+
+/* Add mandatory asterisk to required fields */
+.form-group.required label:after {
+    content: "*";
+    color: red;
+}

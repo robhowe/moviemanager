@@ -5,6 +5,6 @@
     <h1 class="row">Edit a movie in your collection:</h1>
 </div>
 <div class="panel-body">
-@include("shared.movieform")
+@include('shared.movieform', ['movieFormAction' => 'update'])
 </div>
 @endsection

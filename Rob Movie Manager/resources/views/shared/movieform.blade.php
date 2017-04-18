@@ -1,8 +1,16 @@
-    {{ Form::open(['url' => 'moviecollection', 'class'=>'form-horizontal']) }}
+{{--
+  -- See https://laracasts.com/discuss/channels/laravel/laravel-51-same-form-for-create-and-edit-page
+  --}}
 
-    <div class="form-group{!! getErrorsClass($errors, 'title') !!}">
+@if ($movieFormAction === 'create')
+    {!! Form::open(['url' => 'moviecollection', 'class'=>'form-horizontal']) !!}
+@else
+    {!! Form::model($movieCollection, ['class'=>'form-horizontal', 'method'=>'PATCH', 'action'=>['MovieCollectionController@update', $movieCollection->id]]) !!}
+@endif
+
+    <div class="form-group required{!! getErrorsClass($errors, 'title') !!}">
         {{ Form::label('title', 'Movie Title:', ['class'=>'col-md-2']) }}
-        <div class="col-md-6">
+        <div class="col-md-5">
             {{ Form::text('title', null, ['class' => 'form-control']) }}
             {!! getErrorsContent($errors, 'title') !!}
         </div>
@@ -56,9 +64,14 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-4">
-            {{ Form::submit("Add Movie", ['class'=> 'btn btn-default', 'name'=>'Create']) }}
+        <div class="col-md-2">
+        @if ($movieFormAction === 'create')
+            {{ Form::submit("Add Movie", ['class' => 'btn btn-default', 'name' => $movieFormAction]) }}
+        @else
+            {{ Form::submit("Edit Movie", ['class' => 'btn btn-default', 'name' => $movieFormAction]) }}
+        @endif
         </div>
+        <div class="col-md-2"><a href="{{ route('moviecollection.index') }}" class="btn btn-default">Cancel</a></div>
     </div>    
 
     {{ Form::close() }}
