@@ -44,3 +44,16 @@ function getErrorsContent($errors, $field) {
     }
     return $ret_str;
 }
+
+
+/*
+ * Used on Form fields to assign the disabled="disabled" param when needed.
+ * Currently only used by the "delete" action on the "show" view.
+ */
+function getDisabled($movieFormAction) {
+    $ret = NULL;
+    if ($movieFormAction === 'delete') {
+        $ret = 'disabled';
+    }
+    return $ret;
+}

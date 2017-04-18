@@ -48,13 +48,15 @@ class MovieCollectionController extends Controller
     /**
      * Display the specified resource.
      * "Read" MovieCollection Movie page.
+     * Currently only suitable to be used by the Delete page.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $movieCollection = Movie::findOrFail($id);
+        return view("moviecollection.edit", array('movieCollection' => $movieCollection));
     }
 
     /**
@@ -86,8 +88,22 @@ class MovieCollectionController extends Controller
     }
 
     /**
+     * To Delete the specified resource.
+     * "Delete" MovieCollection Movie page.
+     * This actually uses the "show" view as a confirmation before doing a "destroy".
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete($id)
+    {
+        $movieCollection = Movie::findOrFail($id);
+        return view("moviecollection.show", array('movieCollection' => $movieCollection));
+    }
+
+    /**
      * Remove the specified resource from storage.
-     * "Delete" MovieCollection Movie.
+     * From "Delete" MovieCollection Movie.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -97,6 +113,6 @@ class MovieCollectionController extends Controller
         $movie = Movie::findOrFail($id);
         $movie->delete($id);
         return redirect('moviecollection');
-
     }
+
 }

@@ -19,7 +19,7 @@
                 @if (empty($movie->imdb_id))
                     {{ $movie->title }}
                 @else
-                    <a href="http://www.imdb.com/title/{{ $movie->imdb_id }}">{{ $movie->title }}</a>
+                    <a href="http://www.imdb.com/title/{{ $movie->imdb_id }}" target="_blank">{{ $movie->title }}</a>
                 @endif
             </div>
             <div class="col-md-1">{{ getDisplayFormat($movie->format) }}</div>
@@ -28,7 +28,7 @@
             <div class="col-md-1">{{ $movie->rating }}</div>
 
             <div class="col-md-1"><a href="{{ route('moviecollection.edit', [$movie->id]) }}" class="btn btn-default">Edit</a></div>
-            <div class="col-md-1"><a href="{{ url('/movie/' . $movie->id . '/delete') }}" class="btn btn-default">Delete</a></div>
+            <div class="col-md-1"><a href="{{ url('/moviecollection/' . $movie->id . '/delete') }}" class="btn btn-default">Delete</a></div>
         </div>
     @endforeach
     <div class="row">

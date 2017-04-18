@@ -30,3 +30,9 @@
     content: "*";
     color: red;
 }
+
+/* Since Blade Form radio btns don't style properly */
+.form-group div.readonly input,
+.form-group div.disabled input {
+    cursor: not-allowed;
+}

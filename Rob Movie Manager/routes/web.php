@@ -14,3 +14,4 @@
 Route::get("/", "WelcomeController@welcome");
 
 Route::resource("moviecollection", "MovieCollectionController");
+Route::get("/moviecollection/{id}/delete", "MovieCollectionController@delete");
