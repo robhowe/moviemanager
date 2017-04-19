@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!--<script type="text/javascript" src="{{ URL::asset('js/jquery-3.2.1.min.js') }}" />-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/moviem_common.js') }}"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <!--<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />-->
     <link rel="stylesheet" href="{{ URL::asset('css/style_general.css') }}" />
@@ -19,6 +20,12 @@
 @include('shared.navbar')
 
     <div class="content container">
+        @if(Session::has('message'))
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{ Session::get('message') }}
+            </div>
+        @endif
         @yield('content')
     </div>
 

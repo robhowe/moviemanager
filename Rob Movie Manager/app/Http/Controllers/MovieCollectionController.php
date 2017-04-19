@@ -54,9 +54,9 @@ class MovieCollectionController extends Controller
      */
     public function store(MovieCollectionRequest $request)
     {
-        Movie::create($request->all());
+        $movie = Movie::create($request->all());
+        session()->flash('message', 'Successfully added movie "' . $movie->title . '".');
         return redirect('moviecollection');
-
     }
 
     /**
@@ -69,8 +69,8 @@ class MovieCollectionController extends Controller
      */
     public function show($id)
     {
-        $movieCollection = Movie::findOrFail($id);
-        return view("moviecollection.edit", array('movieCollection' => $movieCollection));
+        $movie = Movie::findOrFail($id);
+        return view("moviecollection.edit", compact('movie'));
     }
 
     /**
@@ -82,8 +82,8 @@ class MovieCollectionController extends Controller
      */
     public function edit($id)
     {
-        $movieCollection = Movie::findOrFail($id);
-        return view("moviecollection.edit", array('movieCollection' => $movieCollection));
+        $movie = Movie::findOrFail($id);
+        return view("moviecollection.edit", compact('movie'));
     }
 
     /**
@@ -98,6 +98,7 @@ class MovieCollectionController extends Controller
     {
         $movie = Movie::findOrFail($id);
         $movie->update($request->all());
+        session()->flash('message', 'Successfully updated movie "' . $movie->title . '".');
         return redirect('moviecollection');
     }
 
@@ -111,8 +112,8 @@ class MovieCollectionController extends Controller
      */
     public function delete($id)
     {
-        $movieCollection = Movie::findOrFail($id);
-        return view("moviecollection.show", array('movieCollection' => $movieCollection));
+        $movie = Movie::findOrFail($id);
+        return view("moviecollection.show", compact('movie'));
     }
 
     /**
@@ -126,6 +127,7 @@ class MovieCollectionController extends Controller
     {
         $movie = Movie::findOrFail($id);
         $movie->delete($id);
+        session()->flash('message', 'Successfully deleted movie "' . $movie->title . '".');
         return redirect('moviecollection');
     }
 

@@ -7,14 +7,14 @@
                     'class' => 'form-horizontal'])
     !!}
 @elseif ($movieFormAction === 'update')
-    {!! Form::model($movieCollection, ['class' => 'form-horizontal',
+    {!! Form::model($movie, ['class' => 'form-horizontal',
                                        'method' => 'PATCH',
-                                       'action' => ['MovieCollectionController@update', $movieCollection->id]])
+                                       'action' => ['MovieCollectionController@update', $movie->id]])
     !!}
 @else
-    {!! Form::model($movieCollection, ['class' => 'form-horizontal',
+    {!! Form::model($movie, ['class' => 'form-horizontal',
                                        'method' => 'DELETE',
-                                       'action' => ['MovieCollectionController@destroy', $movieCollection->id]])
+                                       'action' => ['MovieCollectionController@destroy', $movie->id]])
     !!}
 @endif
 

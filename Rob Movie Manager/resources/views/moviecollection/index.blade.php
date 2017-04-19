@@ -10,11 +10,21 @@
         <table class="table table-condensed table-striped table-hover moviem-index">
             <thead>
                 <tr>
-                    <th>{{ SortableTrait::link_to_sorting_action('title') }}</th>
-                    <th>{{ SortableTrait::link_to_sorting_action('format') }}</th>
-                    <th>{{ SortableTrait::link_to_sorting_action('length') }}</th>
-                    <th>{{ SortableTrait::link_to_sorting_action('release_year') }}</th>
-                    <th>{{ SortableTrait::link_to_sorting_action('rating') }}</th>
+                    <th title="Click to sort by Title">
+                        {{ SortableTrait::link_to_sorting_action('title') }}
+                    </th>
+                    <th title="Click to sort by Format">
+                        {{ SortableTrait::link_to_sorting_action('format') }}
+                    </th>
+                    <th title="Click to sort by Length">
+                        {{ SortableTrait::link_to_sorting_action('length') }}
+                    </th>
+                    <th title="Click to sort by Year">
+                        {{ SortableTrait::link_to_sorting_action('release_year') }}
+                    </th>
+                    <th title="Click to sort by Rating">
+                        {{ SortableTrait::link_to_sorting_action('rating') }}
+                    </th>
                     <th></th>
                 </tr>
             </thead>

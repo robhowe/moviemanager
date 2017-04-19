@@ -11,13 +11,74 @@
 
 
 /*
- * master layout
+ * Title/Brand top-left mini logo on navbar
  */
-
-/* Top-left mini logo */
-#moviem-logo {
-    width: 66px;
+.navbar-inverse .navbar-brand img {
+    max-height: 50px;
+    max-width: 66px;
     float: left;
+    margin-top: -2px;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);  /* Safari 6.0 - 9.0 */
+    -moz-filter: brightness(1.2);
+    -o-filter: brightness(1.2);
+    -ms-filter: brightness(1.2);
+}
+/*
+ * Menu links
+ */
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #111;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background-color: #888;
+    text-shadow: 0px 0px 1px #111, 1px 1px 1px #111;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #aaa;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #D5D5D5;
+}
+
+/*
+ * Movie Collection results table
+ */
+.table-responsive {
+    border: 1px solid #000 !important;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #aaa;
+}
+table.table.table-condensed.moviem-index th {
+    border: 1px solid black;
+    background-color: #222;
+    color: #fff;
+}
+table.table.table-condensed.moviem-index th:not(:last-child):hover {
+    background-color: #555;
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+}
+table.table.table-condensed.moviem-index th a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: .04em;
+    text-shadow: 0px 0px 1px #111;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
 }
 
 
@@ -44,30 +105,4 @@
 .btn-wide {
     padding-left: 24px;
     padding-right: 24px;
-}
-
-
-/* The main Movie Collection results table */
-table.table.table-condensed.moviem-index {
-    border: 1px solid black;
-}
-table.table.table-condensed.moviem-index th {
-    border: 1px solid black;
-    background-color: #222;
-    color: #fff;
-}
-table.table.table-condensed.moviem-index th:not(:last-child):hover {
-    background-color: #555;
-}
-table.table.table-condensed.moviem-index th a {
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: .04em;
-    text-shadow: 0px 0px 1px #111;
-}
-table.table.table-condensed.moviem-index th a:hover {
-    text-shadow: 1px 1px 2px #000;
-}
-.table > tbody > tr > td {
-    vertical-align: middle;
 }
