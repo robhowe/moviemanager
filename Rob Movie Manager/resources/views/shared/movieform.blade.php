@@ -70,11 +70,11 @@
         </div>
     </div>
 
-    <div class="form-group{!! getErrorsClass($errors, 'format') !!}">
+    <div class="form-group required{!! getErrorsClass($errors, 'format') !!}">
         {{ Form::label('format', 'Format:', ['class'=>'col-md-2']) }}
-        <div class="col-md-2">
+        <div class="col-md-3">
             {{ Form::select('format',
-                            (['','VHS','LaserDisc','DVD','Blu-ray','File','Streaming']),
+                            (['-- Select --','VHS','LaserDisc','DVD','Blu-ray','File','Streaming']),
                             null,
                             ['class'=> 'form-control', getDisabled($movieFormAction)])
             }}
@@ -89,7 +89,7 @@
         @elseif ($movieFormAction === 'update')
             {{ Form::submit("Save", ['class' => 'btn btn-primary', 'name' => $movieFormAction]) }}
         @else
-            {{ Form::submit("Delete Movie", ['class' => 'btn btn-primary', 'name' => $movieFormAction]) }}
+            {{ Form::submit("Delete Movie", ['class' => 'btn btn-danger', 'name' => $movieFormAction]) }}
         @endif
         </div>
         <div class="col-md-2"><a href="{{ route('moviecollection.index') }}" class="btn btn-default">Cancel</a></div>

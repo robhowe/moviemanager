@@ -18,7 +18,8 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "app/Traits"
         ],
         "psr-4": {
             "RobMovieManager\\": "app/"

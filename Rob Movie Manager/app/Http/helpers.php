@@ -18,7 +18,10 @@ function getDisplayFormat($val) {
 function getDisplayMinutes($minutes) {
     $ret_str = '';
     if (!empty($minutes)) {
-        $ret_str = sprintf('%d hr %02d m', floor($minutes / 60), $minutes % 60);
+        if ($minutes >= 60) {
+            $ret_str = sprintf('%d hr ', floor($minutes / 60));
+        }
+        $ret_str .= sprintf('%02d m', $minutes % 60);
     }
     return $ret_str;
 }
