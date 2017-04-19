@@ -83,16 +83,17 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-2">
+        <div class="col-md-4 btn-toolbar">
         @if ($movieFormAction === 'create')
-            {{ Form::submit("Add Movie", ['class' => 'btn btn-primary', 'name' => $movieFormAction]) }}
+            {{ Form::submit("Add Movie", ['class' => 'btn btn-primary btn-wide', 'name' => $movieFormAction]) }}
         @elseif ($movieFormAction === 'update')
-            {{ Form::submit("Save", ['class' => 'btn btn-primary', 'name' => $movieFormAction]) }}
+            {{ Form::submit("Save", ['class' => 'btn btn-primary btn-wide', 'name' => $movieFormAction]) }}
         @else
             {{ Form::submit("Delete Movie", ['class' => 'btn btn-danger', 'name' => $movieFormAction]) }}
         @endif
+
+        <a href="{{ route('moviecollection.index') }}" class="btn btn-default">Cancel</a>
         </div>
-        <div class="col-md-2"><a href="{{ route('moviecollection.index') }}" class="btn btn-default">Cancel</a></div>
     </div>    
 
     {{ Form::close() }}

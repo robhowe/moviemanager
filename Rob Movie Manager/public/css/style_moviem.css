@@ -37,6 +37,16 @@
     cursor: not-allowed;
 }
 
+/* Since Bootstrap btns are too close together */
+.btn-toolbar>.btn:not(:first-child) {
+    margin-left: 20px;
+}
+.btn-wide {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
 /* The main Movie Collection results table */
 table.table.table-condensed.moviem-index {
     border: 1px solid black;

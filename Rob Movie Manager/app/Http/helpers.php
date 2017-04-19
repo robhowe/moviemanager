@@ -4,6 +4,11 @@
  * See composer.json
  */
 
+function getNavbarActiveClass($url) {
+    return (Request::url() == url($url)) ? ' class="active"' : '';
+}
+
+
 function getDisplayFormat($val) {
     $ret_str = '';
     if (($val > 0) && ($val < 7)) {

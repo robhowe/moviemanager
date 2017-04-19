@@ -7,21 +7,16 @@
     <meta name="abstract" content="Movie Manager. Manage your own movie collection. Sign up now - for free!" />
     <meta name="keywords" content="movie manager,movie collection,movie manager collection,movies,my movies" />
     <title>{{ config('app.name') }}</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--<script type="text/javascript" src="{{ URL::asset('js/jquery-3.2.1.min.js') }}" />-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <!--<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}"  />-->
+    <!--<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />-->
     <link rel="stylesheet" href="{{ URL::asset('css/style_general.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/style_moviem.css') }}" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="{{ url('/') }}"><img id="moviem-logo" src="/images/moviem_logo.png" /></a>
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/moviecollection') }}">Movie Collection</a></li>
-            </ul>
-        </div>
-    </nav>
+@include('shared.navbar')
 
     <div class="content container">
         @yield('content')
