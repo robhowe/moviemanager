@@ -31,7 +31,12 @@
 
     <footer id="moviem-footer">
         <div class="container">
-            <span id="moviem-copyright">&copy; 2017 by Rob Howe</span>
+        <div class="row">
+            <div class="pull-left">&copy; 2017 by Rob Howe</div>
+            <div class="pull-right">
+                <a href="mailto:rob@robhowe.com?subject=MovieManager%20website"><span class="glyphicon glyphicon-envelope"></span> Contact Rob Howe</a>
+            </div>
+            </div>
         </div>
     </footer>
 </body>

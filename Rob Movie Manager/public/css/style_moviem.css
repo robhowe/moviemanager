@@ -50,6 +50,39 @@
     background-color: #D5D5D5;
 }
 
+
+/*
+ * Footer
+ */
+footer div {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+footer a,
+footer a:hover,
+footer a:focus {
+    text-decoration: none;
+}
+
+
+/*
+ * Home Splash page
+ */
+.moviem-splash::before {
+    content: url("/images/moviem_splash_l.png");
+}
+@media only screen and (max-width: 991px) {
+    .moviem-splash::before {
+        content: url("/images/moviem_splash_m.png");
+    }
+}
+@media only screen and (max-width: 700px) {
+    .moviem-splash::before {
+        content: url("/images/moviem_splash_s.png");
+    }
+}
+
+
 /*
  * Movie Collection results table
  */
@@ -79,6 +112,16 @@ table.table.table-condensed.moviem-index th a {
 }
 .table > tbody > tr > td {
     vertical-align: middle;
+}
+/* Movie Trailer link */
+.moviem-trailer-data {
+    display: none;  /* shown via moviem_common.js */
+    margin-left: 8px;
+}
+.moviem-trailer-data a,
+.moviem-trailer-data a:hover,
+.moviem-trailer-data a:focus {
+    text-decoration: none;
 }
 
 

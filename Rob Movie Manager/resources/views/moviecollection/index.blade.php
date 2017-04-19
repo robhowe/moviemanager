@@ -37,8 +37,11 @@
                             {{ $movie->title }}
                         @else
                             <a href="http://www.imdb.com/title/{{ $movie->imdb_id }}"
-                               title="See it on IMDb"
+                               title="View IMDb info"
                                target="_blank">{{ $movie->title }}</a>
+                        @endif
+                        @if (!empty($movie->tmdb_id))
+                            <span class="moviem-trailer-data" data-tmdb_id="{{ $movie->tmdb_id }}"></span>
                         @endif
                     </td>
                     <td>{{ getDisplayFormat($movie->format) }}</td>

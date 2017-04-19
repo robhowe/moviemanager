@@ -26,6 +26,17 @@
         </div>
     </div>
 
+    <div class="form-group{!! getErrorsClass($errors, 'tmdb_id') !!}">
+        {{ Form::label('tmdb_id', 'TMDb ID:', ['class'=>'col-md-2']) }}
+        <div class="col-md-3">
+            {{ Form::text('tmdb_id', null, ['class' => 'form-control',
+                                            'placeholder' => 'e.g.: 123456',
+                                            getDisabled($movieFormAction)])
+            }}
+            {!! getErrorsContent($errors, 'tmdb_id') !!}
+        </div>
+    </div>
+
     <div class="form-group{!! getErrorsClass($errors, 'imdb_id') !!}">
         {{ Form::label('imdb_id', 'IMDb ID:', ['class'=>'col-md-2']) }}
         <div class="col-md-3">

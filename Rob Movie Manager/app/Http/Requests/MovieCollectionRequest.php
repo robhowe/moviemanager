@@ -28,6 +28,7 @@ class MovieCollectionRequest extends FormRequest
     {
         return [
             'title'        => 'required|string|between:1,50',
+            'tmdb_id'      => 'nullable|integer|min:1',
             'imdb_id'      => 'nullable|string|between:3,64',
             'format'       => 'nullable|integer|between:1,6',
             'length'       => 'nullable|integer|between:0,500',
