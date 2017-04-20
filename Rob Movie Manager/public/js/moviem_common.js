@@ -25,7 +25,7 @@ function trailerCallback(self) {
             }
             // YouTube "embed" is fullscreen,
             // or "watch" is within webpage.
-            var youTubeUrl = 'https://www.youtube.com/watch/' + videoKey;
+            var youTubeUrl = 'https://www.youtube.com/embed/' + videoKey;
             var html = '<a class="glyphicon glyphicon-facetime-video" href="' +
                        youTubeUrl + '" target="_blank"' +
                        ' rel="external"' +

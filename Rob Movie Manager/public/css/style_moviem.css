@@ -54,6 +54,9 @@
 /*
  * Footer
  */
+footer {
+    margin-bottom: 18px;
+}
 footer div {
     padding-left: 8px;
     padding-right: 8px;
@@ -68,17 +71,32 @@ footer a:focus {
 /*
  * Home Splash page
  */
-.moviem-splash::before {
-    content: url("/images/moviem_splash_l.png");
+.moviem-splash {
+    width: 100%;
+}
+.moviem-splash-s,
+.moviem-splash-m {
+    display: none;
+}
+.moviem-splash-l {
+    display: block;
 }
 @media only screen and (max-width: 991px) {
-    .moviem-splash::before {
-        content: url("/images/moviem_splash_m.png");
+    .moviem-splash-s,
+    .moviem-splash-l {
+        display: none;
+    }
+    .moviem-splash-m {
+        display: block;
     }
 }
 @media only screen and (max-width: 700px) {
-    .moviem-splash::before {
-        content: url("/images/moviem_splash_s.png");
+    .moviem-splash-m,
+    .moviem-splash-l {
+        display: none;
+    }
+    .moviem-splash-s {
+        display: block;
     }
 }
 
@@ -86,13 +104,30 @@ footer a:focus {
 /*
  * Movie Collection results table
  */
-.table-responsive {
-    border: 1px solid #000 !important;
-    -khtml-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px #aaa;
+@media only screen and (min-width: 768px) {
+    .table-responsive {
+        border: 1px solid #000 !important;
+        -khtml-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 1px #aaa;
+    }
+}
+/*
+ * On some mobile devices, scrollbars aren't displayed,
+ * so we need to make it more obvious that it's still scrollable.
+ */
+@media only screen and (max-width: 767px) {
+    .table-responsive {
+        border-top: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        -khtml-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        box-shadow: 0px 1px 1px -1px #aaa;
+    }
 }
 table.table.table-condensed.moviem-index th {
     border: 1px solid black;

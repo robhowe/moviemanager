@@ -6,8 +6,12 @@
 </div>
 <div class="panel">
     <div class="row">
-        <p>Manage your own movie collection.  Sign up now - for free!</p>
-        <a class="moviem-splash" href="{{ route('moviecollection.index') }}"></a>
+        <p>Manage your own movie collection.  Sign up now - for free!!</p>
+        <a href="{{ route('moviecollection.index') }}">
+            <img class="moviem-splash moviem-splash-s" src="/images/moviem_splash_s.png">
+            <img class="moviem-splash moviem-splash-m" src="/images/moviem_splash_m.png">
+            <img class="moviem-splash moviem-splash-l" src="/images/moviem_splash_l.png">
+        </a>
     </div>
 </div>
 @endsection
