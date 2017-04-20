@@ -71,10 +71,10 @@
     </div>
 
     <div class="form-group{!! getErrorsClass($errors, 'rating') !!} {{ getDisabled($movieFormAction) }}">
-        {{ Form::label('rating', 'Rating:', ['class'=>'col-md-2']) }}
+        {{ Form::label('rating5', 'Rating:', ['class'=>'col-md-2']) }}
         <div class="col-md-2 {{ getDisabled($movieFormAction) }}">
             @for ($loop = 1; $loop < 6; $loop++)
-                {{ Form::radio('rating', $loop, ['class'=>'form-control', getDisabled($movieFormAction)]) }} 
+                {{ Form::radio('rating', $loop, false, ['id'=>'rating'.$loop, 'class'=>'radio-inline', getDisabled($movieFormAction)]) }} 
                 {!! getErrorsContent($errors, 'rating') !!}
             @endfor
             1-5

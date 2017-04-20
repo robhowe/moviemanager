@@ -50,7 +50,8 @@
                     <td>{{ $movie->rating }}</td>
                     <td>
                         <a href="{{ route('moviecollection.edit', [$movie->id]) }}" class="btn btn-info btn-sm">Edit</a>
-                        <a href="{{ url('/moviecollection/' . $movie->id . '/delete') }}" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{{ url('/moviecollection/' . $movie->id . '/delete') }}"
+                           class="btn btn-danger btn-sm moviem-delete-btn">Delete</a>
                     </td>
                 </tr>
             @endforeach

@@ -170,15 +170,12 @@ table.table.table-condensed.moviem-index th a {
     color: red;
 }
 
-/* Since Blade Form radio btns don't style properly */
-.form-group div.readonly input,
-.form-group div.disabled input {
-    cursor: not-allowed;
-}
-
 /* Since Bootstrap btns are too close together */
 .btn-toolbar>.btn:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 22px;
+}
+.moviem-delete-btn {
+    margin-left: 8px;
 }
 .btn-wide {
     padding-left: 24px;
