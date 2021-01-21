@@ -36,8 +36,8 @@ This is a simple Laravel project.
 To get started, update the usual files with your env's settings:
 
 ~~~~
-Rob Movie Manager/.env
-Rob Movie Manager/config/app.php
+RobMovieManager/.env
+RobMovieManager/config/app.php
 ~~~~
 
 Pull in the needed files via composer:
